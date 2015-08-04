@@ -62,7 +62,7 @@ $ runhaskell tau-html-img-opts.hs --scheme=set3 --cols=100 --rows=100 --height=7
 
 ![Picture 3](tau-city-set3-100x100h7.png)
 
-A gray scale image (`set4`) showing the ones:
+A gray scale image (`set4`). By default only decimals are shown and the integer part is ignored, but it can be included with the `--ones` flag:
 
 ```
 $ runhaskell tau-html-img-opts.hs --scheme=set4 --ones --height=30 >tau-city-set4-ones-h30.html
