@@ -146,9 +146,10 @@ $ runhaskell tau-img-png-opts.hs --scheme=set7 --fromchrs "789 456 123 0" --heig
 To show only a selected set of digits, we use the option `--onlychrs`. By including the option `--loop` we can output all the other pictures with similar pattern, too.
 
 ```
-$ runhaskell tau-img-png-opts.hs --onlychrs="1" --loop --height=17 --output output/set1-height15.png
+$ runhaskell tau-img-png-opts.hs --onlychrs="1" --loop --height=12 --output output/set1-height12.png
 ```
 
-![](output/set1-height15-1.png) ![](output/set1-height15-2.png) ![](output/set1-height15-3.png) ![](output/set1-height15-4.png) ![](output/set1-height15-5.png) 
+![](output/set1-height12-1.png) ![](output/set1-height12-2.png) ![](output/set1-height12-3.png) ![](output/set1-height12-4.png) ![](output/set1-height12-5.png) 
 
-![](output/set1-height15-6.png) ![](output/set1-height15-7.png) ![](output/set1-height15-8.png) ![](output/set1-height15-9.png) ![](output/set1-height15-0.png) 
+![](output/set1-height12-6.png) ![](output/set1-height12-7.png) ![](output/set1-height12-8.png) ![](output/set1-height12-9.png) ![](output/set1-height12-0.png) 
+
