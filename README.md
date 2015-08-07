@@ -1,6 +1,6 @@
 # tau-city
 
-Tau digits to synestesia mnemonic converter
+Tau digits and synestesia mnemonics 
 
 ## Tau
 
@@ -21,7 +21,7 @@ The first 200 decimals of tau
 
 ```
 $ runhaskell tau-img-png-opts.hs --help
-tau - tau desimals to synestesia mnemonic converter
+tau - tau desimals and synestesia mnemonics
 
 Usage: tau-img-png-opts.hs [-s|--scheme SCHEME] [--output PNGFILE]
                            [--fromchrs FROMCHRS] [--onlychrs ONLYCHRS] [--loop]
@@ -134,19 +134,19 @@ The schemes `set6` and `set7` paint a road network (or something like that), the
 $ runhaskell tau-img-png-opts.hs --scheme=set6 --height=20 --output output/set6-height20.png
 ```
 
-![Picture 10](output/set6-height20.png)
+![Picture 11](output/set6-height20.png)
 
 ```
 $ runhaskell tau-img-png-opts.hs --scheme=set7 --height=20 --output output/set7-height20.png
 ```
 
-![Picture 11](output/set7-height20.png)
+![Picture 12](output/set7-height20.png)
 
 ```
 $ runhaskell tau-img-png-opts.hs --scheme=set7 --fromchrs "789 456 123 0" --height=20 --output output/key-set7-height20.png
 ```
 
-![Picture 9](output/key-set7-height20.png)
+![Picture 13](output/key-set7-height20.png)
 
 
 ## Looping over one-digit tables
