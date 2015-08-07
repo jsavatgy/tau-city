@@ -43,6 +43,8 @@ Available options:
 
 ## Examples
 
+### Set One
+
 With default parameters the program will write a png-file to `output.png`:
 
 ```
@@ -53,7 +55,7 @@ Size: 568x568 pixels
 
 ![Picture 1](output/output.png)
 
-Key to colors can be formatted by giving the `--fromchrs` option. A non-digit  means newline.  The string "12345 67890" is thus positioned in the following manner:
+Key to colors can be formatted by giving the `--fromchrs` option. A non-digit  means newline.  The string `"12345 67890"` is thus positioned in the following manner:
 
 ```
 12345
@@ -65,8 +67,10 @@ $ runhaskell tau-img-png-opts.hs --fromchrs "12345 67890" --output output/key-se
 Created: output/key-set1.png
 Size: 288x120 pixels
 ```
+
 ![Picture 2](output/key-set1.png)
 
+### Set Two
 
 With scheme `set2` and individual block height of `30` pixels:
 
@@ -74,7 +78,7 @@ With scheme `set2` and individual block height of `30` pixels:
 $ runhaskell tau-img-png-opts.hs --scheme=set2 --height=30 --output output/set2-height30.png
 ```
 
-![Picture 2](output/set2-height30.png)
+![Picture 3](output/set2-height30.png)
 
 And the key for it:
 
@@ -82,23 +86,24 @@ And the key for it:
 $ runhaskell tau-img-png-opts.hs --scheme=set2 --fromchrs "12345 67890" --height=30 --output output/key-set2-height30.png
 ```
 
-![Picture 3](output/key-set2-height30.png)
+![Picture 4](output/key-set2-height30.png)
+
+### Set Three
 
 The `set3` is the topographic scheme, with the key:
-
 
 ```
 $ runhaskell tau-img-png-opts.hs --scheme=set3 --height=30 --output output/set3-height30.png
 ```
 
-![Picture4](output/set3-height30.png)
+![Picture5](output/set3-height30.png)
 
-![Picture5](output/key-set3-height30.png)
+![Picture6](output/key-set3-height30.png)
 
+### Set Four
 
 Now let's get grazy! 10000 digits in gray scale scheme `set4`, with the key:
 
-![Picture 6](output/key-set4-height30.png)
 
 ```
 $ runhaskell tau-img-png-opts.hs --scheme=set4 --cols=100 --rows=100 --height=4 --output output/gray-scale-set4-100x100.png
@@ -108,6 +113,8 @@ $ runhaskell tau-img-png-opts.hs --scheme=set4 --cols=100 --rows=100 --height=4 
 
 ![Picture 8](output/key-set4-height30.png)
 
+
+### Set Five
 
 The scheme `set5` includes the actual numbers.
 
@@ -119,6 +126,7 @@ $ runhaskell tau-img-png-opts.hs --scheme=set5 --height=30 --output output/set5-
 
 ![Picture 10](output/key-set5-height30.png)
 
+### Sets Six and Seven
 
 The schemes `set6` and `set7` paint a road network (or something like that), the key being the numeric keypad.
 
