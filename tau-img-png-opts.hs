@@ -64,7 +64,7 @@ optsParserInfo :: ParserInfo Options
 optsParserInfo = info (helper <*> optsParser)
   (  fullDesc
   <> progDesc "Tau Synesthesia"
-  <> header   "tau - tau desimals to synestesia mnemonic converter" )
+  <> header   "tau - tau desimals and synestesia mnemonics" )
 
 generate n str = ((take n) . filtered) str
 filtered str = filter isDigit str
