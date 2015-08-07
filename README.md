@@ -141,7 +141,7 @@ $ runhaskell tau-img-png-opts.hs --scheme=set7 --fromchrs "789 456 123 0" --heig
 ![Picture 9](output/key-set7-height20.png)
 
 
-## Partial tables and looping
+## Looping over one-digit tables
 
 To show only a selected set of digits, we use the option `--onlychrs`. By including the option `--loop` we can output all the other pictures with similar pattern, too.
 
@@ -152,4 +152,23 @@ $ runhaskell tau-img-png-opts.hs --onlychrs="1" --loop --height=12 --output outp
 ![](output/set1-height12-1.png) ![](output/set1-height12-2.png) ![](output/set1-height12-3.png) ![](output/set1-height12-4.png) ![](output/set1-height12-5.png) 
 
 ![](output/set1-height12-6.png) ![](output/set1-height12-7.png) ![](output/set1-height12-8.png) ![](output/set1-height12-9.png) ![](output/set1-height12-0.png) 
+
+## Looping over two-digit tables
+
+```
+runhaskell tau-img-png-opts.hs --onlychrs="05" --loop --height=12 --output output/set1-two-digit.png
+```
+
+![](output/set1-two-digit-05.png) ![](output/set1-two-digit-16.png) ![](output/set1-two-digit-27.png) ![](output/set1-two-digit-38.png) ![](output/set1-two-digit-49.png)
+
+
+## Looping over three-digit tables
+
+```
+runhaskell tau-img-png-opts.hs --onlychrs="147" --loop --height=12 --output output/set1-three-digit.png
+```
+
+![](output/set1-three-digit-147.png) ![](output/set1-three-digit-258.png) ![](output/set1-three-digit-369.png) ![](output/set1-three-digit-047.png) ![](output/set1-three-digit-158.png)
+
+![](output/set1-three-digit-269.png) ![](output/set1-three-digit-037.png) ![](output/set1-three-digit-148.png) ![](output/set1-three-digit-259.png) ![](output/set1-three-digit-036.png)
 
