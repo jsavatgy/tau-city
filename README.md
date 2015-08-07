@@ -86,7 +86,6 @@ $ runhaskell tau-img-png-opts.hs --scheme=set2 --fromchrs "12345 67890" --height
 
 The `set3` is the topographic scheme, with the key:
 
-![](output/key-set3-height30.png)
 
 ```
 $ runhaskell tau-img-png-opts.hs --scheme=set3 --height=30 --output output/set3-height30.png
@@ -94,33 +93,34 @@ $ runhaskell tau-img-png-opts.hs --scheme=set3 --height=30 --output output/set3-
 
 ![Picture4](output/set3-height30.png)
 
+![Picture5](output/key-set3-height30.png)
+
+
 Now let's get grazy! 10000 digits in gray scale scheme `set4`, with the key:
 
-![Picture 5](output/key-set4-height30.png)
+![Picture 6](output/key-set4-height30.png)
 
 ```
 $ runhaskell tau-img-png-opts.hs --scheme=set4 --cols=100 --rows=100 --height=4 --output output/gray-scale-set4-100x100.png
 ```
 
-![Picture 6](output/gray-scale-set4-100x100.png)
+![Picture 7](output/gray-scale-set4-100x100.png)
+
+![Picture 8](output/key-set4-height30.png)
+
 
 The scheme `set5` includes the actual numbers.
-
-![Picture 7](output/key-set5-height30.png)
 
 ```
 $ runhaskell tau-img-png-opts.hs --scheme=set5 --height=30 --output output/set5-height30.png
 ```
 
-![Picture 8](output/set5-height30.png)
+![Picture 9](output/set5-height30.png)
+
+![Picture 10](output/key-set5-height30.png)
+
 
 The schemes `set6` and `set7` paint a road network (or something like that), the key being the numeric keypad.
-
-```
-$ runhaskell tau-img-png-opts.hs --scheme=set7 --fromchrs "789 456 123 0" --height=20 --output output/key-set7-height20.png
-```
-
-![Picture 9](output/key-set7-height20.png)
 
 ```
 $ runhaskell tau-img-png-opts.hs --scheme=set6 --height=20 --output output/set6-height20.png
@@ -131,7 +131,15 @@ $ runhaskell tau-img-png-opts.hs --scheme=set6 --height=20 --output output/set6-
 ```
 $ runhaskell tau-img-png-opts.hs --scheme=set7 --height=20 --output output/set7-height20.png
 ```
+
 ![Picture 11](output/set7-height20.png)
+
+```
+$ runhaskell tau-img-png-opts.hs --scheme=set7 --fromchrs "789 456 123 0" --height=20 --output output/key-set7-height20.png
+```
+
+![Picture 9](output/key-set7-height20.png)
+
 
 ## Partial tables and looping
 
@@ -141,14 +149,6 @@ To show only a selected set of digits, we use the option `--onlychrs`. By includ
 $ runhaskell tau-img-png-opts.hs --onlychrs="1" --loop --height=17 --output output/set1-height15.png
 ```
 
-!()[output/set1-height15-1.png]
-!()[output/set1-height15-2.png]
-!()[output/set1-height15-3.png]
-!()[output/set1-height15-4.png]
-!()[output/set1-height15-5.png]
-!()[output/set1-height15-6.png]
-!()[output/set1-height15-7.png]
-!()[output/set1-height15-8.png]
-!()[output/set1-height15-9.png]
-!()[output/set1-height15-0.png]
+![](output/set1-height15-1.png) ![](output/set1-height15-2.png) ![](output/set1-height15-3.png) ![](output/set1-height15-4.png) ![](output/set1-height15-5.png) 
 
+![](output/set1-height15-6.png) ![](output/set1-height15-7.png) ![](output/set1-height15-8.png) ![](output/set1-height15-9.png) ![](output/set1-height15-0.png) 
