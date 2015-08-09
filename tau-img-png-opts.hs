@@ -13,6 +13,7 @@ data Options = Options {
   loop :: Bool,
   cols :: Int,
   rows :: Int,
+  dropDigits :: Int,
   height :: Int }
 
 optsParser :: Parser Options
@@ -54,11 +55,15 @@ optsParser = Options
      <> help "Number of lines (y) to print"
      <> value 10 )
   <*> option auto
+     (  long "drop"
+     <> metavar "DROP"
+     <> help "How many digits to omit from beginning. Default = 1 (the units not shown)"
+     <> value 1 )
+  <*> option auto
      (  long "height"
      <> metavar "HEIGHT"
      <> help "Height of each picture (one digit) in pixels"
      <> value 56 )
-
 
 optsParserInfo :: ParserInfo Options
 optsParserInfo = info (helper <*> optsParser)
@@ -69,9 +74,9 @@ optsParserInfo = info (helper <*> optsParser)
 generate n str = ((take n) . filtered) str
 filtered str = filter isDigit str
 fileName = "tau-digits.txt"
-every opts = generate ((rows opts)*(cols opts)+1)
+every opts = generate ((rows opts)*(cols opts) + dropDigits opts)
 rowsOf n = chunksOf n
-table opts = (rowsOf (rows opts)) . (drop 1) . (every opts)
+table opts = (rowsOf (cols opts)) . (drop (dropDigits opts)) . (every opts)
 
 margin = 4
 

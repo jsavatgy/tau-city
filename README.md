@@ -25,7 +25,8 @@ tau - tau desimals and synestesia mnemonics
 
 Usage: tau-img-png-opts.hs [-s|--scheme SCHEME] [--output PNGFILE]
                            [--fromchrs FROMCHRS] [--onlychrs ONLYCHRS] [--loop]
-                           [-c|--cols COLS] [-r|--rows ROWS] [--height HEIGHT]
+                           [-c|--cols COLS] [-r|--rows ROWS] [--drop DROP]
+                           [--height HEIGHT]
   Tau Synesthesia
 
 Available options:
@@ -38,6 +39,8 @@ Available options:
   --loop                   Loop over ONLYCHRS, printing multiple pictures
   -c,--cols COLS           Number of colums (x) at every line
   -r,--rows ROWS           Number of lines (y) to print
+  --drop DROP              How many digits to omit from beginning. Default = 1
+                           (the units not shown)
   --height HEIGHT          Height of each picture (one digit) in pixels
 ```
 
@@ -104,7 +107,6 @@ $ runhaskell tau-img-png-opts.hs --scheme=set3 --height=30 --output output/set3-
 
 Now let's get grazy! 10000 digits in gray scale scheme `set4`, with the key:
 
-
 ```
 $ runhaskell tau-img-png-opts.hs --scheme=set4 --cols=100 --rows=100 --height=4 --output output/gray-scale-set4-100x100.png
 ```
@@ -112,7 +114,6 @@ $ runhaskell tau-img-png-opts.hs --scheme=set4 --cols=100 --rows=100 --height=4 
 ![Picture 7](output/gray-scale-set4-100x100.png)
 
 ![Picture 8](output/key-set4-height30.png)
-
 
 ### Set Five
 
@@ -148,6 +149,27 @@ $ runhaskell tau-img-png-opts.hs --scheme=set7 --fromchrs "789 456 123 0" --heig
 
 ![Picture 13](output/key-set7-height20.png)
 
+## Dropping digits
+
+To drop digits from the beginning, use the option `--drop`. The default is to drop one digit, that is, not to show the unit '6'.
+
+```
+$ runhaskell tau-img-png-opts.hs --rows=1 --scheme=set5 --output output/set5-drop1.png
+```
+
+![Picture14](output/set5-drop1.png)
+
+```
+$ runhaskell tau-img-png-opts.hs --drop=0 --rows=1 --scheme=set5 --output output/set5-drop0.png
+```
+
+![Picture15](output/set5-drop0.png)
+
+```
+$ runhaskell tau-img-png-opts.hs --drop=11 --rows=1 --scheme=set5 --output output/set5-drop11.png
+```
+
+![Picture16](output/set5-drop11.png)
 
 ## Looping over one-digit tables
 
